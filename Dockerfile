@@ -13,6 +13,8 @@ RUN mkdir -p ${ROCKETMQ_HOME} \
   && rm -rf ${ROCKETMQ_HOME}/rocketmq-all* \
   && rm -f /tmp/rocketmq.zip \
   && rm -rf ${ROCKETMQ_HOME}/bin/runbroker.sh
+  
+VOLUME ${ROCKETMQ_HOME}/data
 
 EXPOSE 10909 10911
 
