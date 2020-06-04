@@ -6,7 +6,7 @@ if [ $HOSTNAME ] && [ $SERVICE_NAME ]; then
     echo "brokerIP1="$brokerIp > ../conf/broker.conf
     sh mqbroker -c ../conf/broker.conf
 else
-    sh mqbroker
+    sh mqbroker autoCreateTopicEnable=true
 fi
 
 exec "$@"
